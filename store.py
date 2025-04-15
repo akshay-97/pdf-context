@@ -35,7 +35,7 @@ class QdrantStore(VectorStore):
     def search(self, query_vector):
         if self.collection_name == None:
             raise ValueError("Init collection name")
-        self.client.search(
+       return  self.client.search(
                 collection_name=self.collection_name,
                 query_vector=query_vector,
                 limit=self.limit

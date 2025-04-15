@@ -11,7 +11,7 @@ class Embedder():
     def embed_document(self, chunks):
         embeddings = self.model.encode(chunks)
         print(embeddings)
-        embeddings
+        return embeddings
 
 
 
@@ -52,4 +52,5 @@ class SearchVectorStore:
 
     def search_query(self, query):
         query_vector = self.embed.embed_document(query).tolist()
-        self.store.search(query_vector)
+        return self.store.search(query_vector)
+

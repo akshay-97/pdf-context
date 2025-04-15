@@ -23,7 +23,8 @@ def main():
         elif input_string == "\n":
             continue
         println("results : **")
-        search.search_query(input_string)
+        results = eearch.search_query(input_string)
+        print(results)
         print("\n**")
 
 
